@@ -14,7 +14,7 @@ public class App {
 		String txt = "TEste De TExto";
 		String txtUpper = Texto.toUpper(txt);
 		String txtLower = Texto.toLower(txt);
-		System.out.printf("Texto: %s\nMaiusculo: %s\nMinusculo: %s\n", 
+		System.out.printf("\nTexto: %s\nMaiusculo: %s\nMinusculo: %s\n", 
 				txt, txtUpper, txtLower);
 
 //		Atividade 3
@@ -23,7 +23,7 @@ public class App {
 				z = 0.5;
 		double res1 = Matematica.menor(x, y);
 		double res2 = Matematica.menorTriplo(x, y, z);
-		System.out.printf("a = %s, b = %s, c = %s\n", x, y, z);
+		System.out.printf("\na = %s, b = %s, c = %s\n", x, y, z);
 		System.out.printf("Menor de a e b: %s\n", res1);
 		System.out.printf("Menor de a, b e c: %s\n", res2);
 		
