@@ -19,8 +19,8 @@ public class App {
 
 //		Atividade 3
 		double x = 1,
-				y = 3,
-				z = 0.5;
+				y = 0.2,
+				z = 0.1;
 		double res1 = Matematica.menor(x, y);
 		double res2 = Matematica.menorTriplo(x, y, z);
 		System.out.printf("\na = %s, b = %s, c = %s\n", x, y, z);
