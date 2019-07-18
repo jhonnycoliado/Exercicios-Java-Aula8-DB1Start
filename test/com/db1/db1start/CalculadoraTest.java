@@ -10,7 +10,7 @@ public class CalculadoraTest {
 	
 	@Before
 	public void setUp() {
-		calculadora = new Calculadora(4, 2);
+		calculadora = new Calculadora(4, 2, 0.5);
 	}
 	
 	@Test
@@ -54,5 +54,31 @@ public class CalculadoraTest {
 		int impares = calculadora.calcImpar();
 		Assert.assertEquals(48, impares);
 	}
+	
+//	Calculadora calculadora = new Calculadora(4, 2, 0.5);
+	
+	@Test
+	public void deveRetornarOMenorNumeroEntreN1eN2() {
+		Calculadora calculadora = new Calculadora(4, 2, 0.5);
+		double res = calculadora.menor();
+		Assert.assertEquals(2.0, res, 0.01);
+	}
+	
+	@Test
+	public void deveRetornarOMenorNumeroEntreN1eN2eN3() {
+		Calculadora calculadora = new Calculadora(4, 2, 0.5);
+		double res = calculadora.menorTres();
+		Assert.assertEquals(0.5, res, 0.01);
+	}
+	
+	@Test
+	public void deveRetornarAMediaDeTresNumeros() {
+		Calculadora calculadora = new Calculadora(4, 2, 0.5);
+		double res = calculadora.mediaTres();
+		Assert.assertEquals(2.16, res, 0.01);
+	}
+	
+	
+	
 
 }

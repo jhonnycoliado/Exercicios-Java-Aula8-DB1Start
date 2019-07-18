@@ -5,9 +5,12 @@ public class App {
 //		Calculadora calculadora = new Calculadora(4, 50);
 //		System.out.println(calculadora.subtrair());
 		
-		Texto texto = new Texto("banana, maçã, melancia");
-		String res = texto.nomeQuatro();
+		Calculadora calculadora = new Calculadora(4, 2, 0.5);
+		double res = calculadora.mediaTres();
 		System.out.println(res);
+//		if(res == 2.0) {
+		System.out.print((res == 2.0));
+//		}
 		
 //		calculadora.
 //		Atividade 1

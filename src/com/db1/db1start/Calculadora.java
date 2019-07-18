@@ -4,10 +4,12 @@ public class Calculadora {
 	
 	private int n1;
 	private int n2;
+	private double n3;
 	
-	public Calculadora(int n1, int n2) {
+	public Calculadora(int n1, int n2, double n3) {
 		this.n1 = n1;
 		this.n2 = n2;
+		this.n3 = n3;
 	}
 	
 	public int somar() {
@@ -54,6 +56,32 @@ public class Calculadora {
 			}
 		}
 		return totalImpar;
+	}
+	
+	public double menor() {
+		if (this.n1 == this.n2) {
+			return 0;
+		}
+		if(this.n1 < this.n2) {
+			return this.n1;
+		}
+		else return this.n2;
+	}
+	
+	public double menorTres() {
+		if (this.n1 < this.n2 && this.n1 < this.n3) {
+			return this.n1;
+		}
+		if (this.n2 < this.n1 && this.n2 < this.n3) {
+			return this.n2;
+		}
+		else return this.n3;
+	}
+	
+	public double mediaTres() {
+		double total = this.n1+this.n2+this.n3;
+		return total/3;
+		
 	}
 
 }
