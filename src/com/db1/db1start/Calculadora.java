@@ -81,7 +81,10 @@ public class Calculadora {
 	public double mediaTres() {
 		double total = this.n1+this.n2+this.n3;
 		return total/3;
-		
+	}
+	
+	public double areaTriangulo() {
+		return (this.n1+this.n2)/2;
 	}
 
 }

@@ -6,7 +6,7 @@ public class App {
 //		System.out.println(calculadora.subtrair());
 		
 		Calculadora calculadora = new Calculadora(4, 2, 0.5);
-		double res = calculadora.mediaTres();
+		double res = calculadora.areaTriangulo();
 		System.out.println(res);
 //		if(res == 2.0) {
 		System.out.print((res == 2.0));
