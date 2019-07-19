@@ -2,18 +2,11 @@ package com.db1.db1start;
 
 public class App {
 	public static void main(String[] args) {
-//		Calculadora calculadora = new Calculadora(4, 50);
-//		System.out.println(calculadora.subtrair());
+		Texto texto = new Texto();
+		String r = texto.nomeUm("Jhonny da silva coliado");
+		System.out.println(r);
 		
-		Calculadora calculadora = new Calculadora(4, 2, 0.5);
-		double res = calculadora.areaTriangulo();
-		System.out.println(res);
-//		if(res == 2.0) {
-		System.out.print((res == 2.0));
-//		}
-		
-//		calculadora.
-//		Atividade 1
+////		Atividade 1
 //		int a = 10,
 //			b = 30;
 //		int soma = Matematica.soma(a, b);
@@ -22,9 +15,10 @@ public class App {
 //				a, b, soma, subtracao);
 //
 ////		Atividade 2
+//		Texto texto = new Texto();
 //		String txt = "TEste De TExto";
-//		String txtUpper = Texto.toUpper(txt);
-//		String txtLower = Texto.toLower(txt);
+//		String txtUpper = texto.toUpper(txt);
+//		String txtLower = texto.toLower(txt);
 //		System.out.printf("\nTexto: %s\nMaiusculo: %s\nMinusculo: %s\n", 
 //				txt, txtUpper, txtLower);
 //

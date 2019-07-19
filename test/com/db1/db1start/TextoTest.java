@@ -3,94 +3,87 @@ package com.db1.db1start;
 import org.junit.Test;
 
 import org.junit.Assert;
+import org.junit.Before;
 
 public class TextoTest {
 	
+	private Texto texto;
+	
+	@Before
+	public void setUp() {
+		texto = new Texto();
+	}
+	
 	@Test
 	public void deveRetornarTextoMaisculo() {
-		Texto texto = new Texto("Sample Text");
-		String res = texto.toUpper();
+		String res = texto.toUpper("Sample Text");
 		Assert.assertEquals("SAMPLE TEXT", res);
 	}
 	
 	@Test
 	public void deveRetornarTextoMinusculo() {
-		Texto texto = new Texto("Sample Text");
-		String res = texto.toLower();
+		String res = texto.toLower("Sample Text");
 		Assert.assertEquals("sample text", res);
 	}
 	
 	@Test
 	public void deveContarOnumeroDeCaracteres() {
-		Texto texto = new Texto("DB1START");
-		int res = texto.countChr();
+		int res = texto.countChr("DB1START");
 		Assert.assertEquals(8, res);
 	}
 	
 	@Test
 	public void deveContarApenasLetras() {
-		Texto texto = new Texto(" DB1START ");
-		int res = texto.countLetra();
+		int res = texto.countLetra(" DB1START ");
 		Assert.assertEquals(8, res);
 	}
 	
 	@Test
 	public void deveRemoverTodosOsEspacos() {
-		Texto texto = new Texto(" DB1START ");
-		String res = texto.removeSpace();
+		String res = texto.removeSpace(" DB1START ");
 		Assert.assertEquals("DB1START", res);
 	}
 	
 	@Test
 	public void retornaApenasAsQuatroPrimeiraLetras() {
-		Texto texto = new Texto("Jhonny da silva coliado");
-		String res = texto.nomeUm();
+		String res = texto.nomeUm("Jhonny da silva coliado");
 		Assert.assertEquals("Jhon", res);
 	}
 	
 	@Test
 	public void retornaONomeAPartirDaTerceiraLetra() {
-		Texto texto = new Texto("Jhonny da silva coliado");
-		String res = texto.nomeDois();
+		String res = texto.nomeDois("Jhonny da silva coliado");
 		Assert.assertEquals("nny da silva coliado", res);
 	}
 	
 	@Test
-	public void retornaSomeAsQuatroUltimasLetras() {
-		Texto texto = new Texto("Jhonny da silva coliado");
-		String res = texto.nomeTres();
+	public void retornaSomenteAsQuatroUltimasLetras() {
+		String res = texto.nomeTres("Jhonny da silva coliado");
 		Assert.assertEquals("iado", res);
 	}
 	
 	@Test
 	public void substituiOPrimeiroNomePorAlUNO() {
-		Texto texto = new Texto("Jhonny da silva coliado");
-		String res = texto.nomeQuatro();
+		String res = texto.nomeQuatro("Jhonny da silva coliado");
 		Assert.assertEquals("ALUNO da silva coliado", res);
 	}
 	
 	@Test
 	public void retornaAsPalavrasSeparadas() {
-		Texto texto = new Texto("banana, maçã, melancia");
-		String res = texto.palavraSeparada();
+		String res = texto.palavraSeparada("banana, maçã, melancia");
 		Assert.assertEquals("banana,\nmaçã,\nmelancia", res);
 	}
 	
 	@Test
 	public void retornaONumeroDeVogais() {
-		Texto texto = new Texto("Jhonny da");
-		int res = texto.countVogal();
-		Assert.assertEquals(2, res);
+		int res = texto.countVogal("Jhonny Coliado");
+		Assert.assertEquals(5, res);
 	}
 	
 	@Test
 	public void retornaOTextoInvertido() {
-		Texto texto = new Texto("sample text");
-		String res = texto.textoInvertido();
-		Assert.assertEquals("txet elpmas", res);
+		StringBuilder res = texto.textoInvertido("sample text");
+		Assert.assertEquals("txet elpmas", res.toString());
 	}
 	
-	
-	
-
 }
