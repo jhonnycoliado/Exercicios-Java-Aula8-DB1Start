@@ -76,7 +76,7 @@ public class CalculadoraTest {
 	
 	@Test
 	public void retornarAAreaTriangulo() {
-//		Assumindo que N1 = Altura e N2 = Base.
+//		Assumindo que N1 = Base e N2 = Altura
 		double res = calculadora.areaTriangulo(4, 2);
 		Assert.assertEquals(4.0, res, 0.01);
 	}

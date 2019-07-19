@@ -45,13 +45,11 @@ public class Calculadora {
 	}
 	
 	public double menorTres(double n1, double n2, double n3) {
-		double min = Math.min(n1, n2);
-		return Math.min(n3, min);
+		return Math.min(Math.min(n1, n2), n3);
 	}
 	
 	public double mediaTres(double n1, double n2, double n3) {
-		double total = n1+n2+n3;
-		return total/3;
+		return (n1+n2+n3)/3;
 	}
 	
 	public double areaTriangulo(double base, double altura) {
