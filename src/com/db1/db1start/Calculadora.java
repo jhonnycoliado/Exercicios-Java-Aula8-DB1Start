@@ -20,20 +20,11 @@ public class Calculadora {
 	}
 	
 	public boolean par(int n1) {
-		if ((n1 % 2) == 0) {
-			return true;
-		}
-		else return false;
+		return (n1 % 2) == 0;
 	}
 	
 	public int maior(int n1, int n2) {
-		if (n1 == n2) {
-			return 0;
-		}
-		if (n1 > n2) {
-			return n1;
-		}
-		else return n2;
+		return Math.max(n1, n2);
 	}
 	
 	public int calcImpar(int n1) {
@@ -49,24 +40,13 @@ public class Calculadora {
 		return totalImpar;
 	}
 	
-	public double menor(int n1, int n2) {
-		if (n1 == n2) {
-			return 0;
-		}
-		if(n1 < n2) {
-			return n1;
-		}
-		else return n2;
+	public double menor(double n1, double n2) {
+		return Math.min(n1, n2);
 	}
 	
 	public double menorTres(double n1, double n2, double n3) {
-		if (n1 < n2 && n1 < n3) {
-			return n1;
-		}
-		if (n2 < n1 && n2 < n3) {
-			return n2;
-		}
-		else return n3;
+		double min = Math.min(n1, n2);
+		return Math.min(n3, min);
 	}
 	
 	public double mediaTres(double n1, double n2, double n3) {

@@ -38,7 +38,7 @@ public class CalculadoraTest {
 	}
 	
 	@Test
-	public void deveMostrarSeN1ehPar() {
+	public void deveMostrarSeONumeroEPar() {
 		boolean par = calculadora.par(4);
 		Assert.assertEquals(true, par);
 	}
